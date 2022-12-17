@@ -121,7 +121,7 @@ public class BruteForce {
 
 
     private boolean point(ArrayList<Character> arrCode) {
-        return (arrCode.contains('.') && (arrCode.get(arrCode.indexOf('.') + 1).equals(' ') || arrCode.get(arrCode.indexOf('.') + 1).equals('.') || arrCode.get(arrCode.indexOf('.') + 2).equals('\n')));
+        return (arrCode.contains('.') && (arrCode.get(arrCode.indexOf('.') + 1).equals(' ') || arrCode.get(arrCode.indexOf('.') + 1).equals('.') || arrCode.get(arrCode.indexOf('.') + 1).equals(',') || arrCode.get(arrCode.indexOf('.') + 2).equals('\n')));
     }
 
     private boolean comma(ArrayList<Character> arrCode) {
