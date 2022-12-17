@@ -48,7 +48,6 @@ public class BruteForce {
                     path = Path.of(textField.getText().trim());
                     bruteForce(path);
                     frame.setVisible(false);
-                    frameFinalBruteForce();
 
                 }
             }
@@ -85,8 +84,8 @@ public class BruteForce {
                     }
                     writer.flush();
                     writer.close();
-                    System.out.println("Криптографический ключ: " + k);
-                    break;
+                    frameFinalBruteForce(k);
+                    //break;
                 } else {
                     arrCode.clear();
                 }
@@ -143,25 +142,32 @@ public class BruteForce {
         return true;
     }
 
-    private void frameFinalBruteForce() {
+    private void frameFinalBruteForce(int k) {
         JFrame frame3 = new JFrame("Выполнено");
         frame3.setBounds(300, 130, 600, 150);
         frame3.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame3.setLayout(new BoxLayout(frame3.getContentPane(), BoxLayout.Y_AXIS));
 
-        JLabel jLabel = new JLabel("Расшифрованный текст записан в файл: C:\\Java\\MyProject\\CryptoSwing\\src\\BruteForceFile.txt");
+        JLabel jLabel1 = new JLabel("Расшифрованный текст записан в файл: C:\\Java\\MyProject\\CryptoSwing\\src\\BruteForceFile.txt");
+        JLabel jLabel2 = new JLabel("Ключ шифрования: " + k);
+
         JButton jButton = new JButton("Закрыть");
 
         JPanel jPanel1 = new JPanel();
         JPanel jPanel2 = new JPanel();
+        JPanel jPanel3 = new JPanel();
+
         jPanel1.setLayout(new FlowLayout());
         jPanel2.setLayout(new FlowLayout());
+        jPanel3.setLayout(new FlowLayout());
 
-        jPanel1.add(jLabel);
-        jPanel2.add(jButton);
+        jPanel1.add(jLabel1);
+        jPanel2.add(jLabel2);
+        jPanel3.add(jButton);
 
         frame3.add(jPanel1);
         frame3.add(jPanel2);
+        frame3.add(jPanel3);
 
         frame3.setVisible(true);
         jButton.addActionListener(new ActionListener() {
