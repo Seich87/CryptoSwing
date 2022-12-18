@@ -121,11 +121,17 @@ public class BruteForce {
 
 
     private boolean point(ArrayList<Character> arrCode) {
-        return (arrCode.contains('.') && (arrCode.get(arrCode.indexOf('.') + 1).equals(' ') || arrCode.get(arrCode.indexOf('.') + 1).equals('.') || arrCode.get(arrCode.indexOf('.') + 1).equals(',') || arrCode.get(arrCode.indexOf('.') + 2).equals('\n')));
+        if (arrCode.contains('.')) {
+            return (arrCode.get(arrCode.indexOf('.') + 1).equals(' ') || arrCode.get(arrCode.indexOf('.') + 1).equals('.') || arrCode.get(arrCode.indexOf('.') + 1).equals(',') || arrCode.get(arrCode.indexOf('.') + 2).equals('\n'));
+        }
+        return true;
     }
 
     private boolean comma(ArrayList<Character> arrCode) {
-        return (arrCode.contains(',') && arrCode.get(arrCode.indexOf(',') + 1).equals(' '));
+        if (arrCode.contains(',')) {
+            return (arrCode.get(arrCode.indexOf(',') + 1).equals(' '));
+        }
+        return true;
     }
 
     private boolean exclamationMark(ArrayList<Character> arrCode) {
