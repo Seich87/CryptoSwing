@@ -4,17 +4,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Swing {
-
-    final String allStr = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя.,\":-!? ";
-
     private static String title;
 
     void frame() {
-        JFrame jframe1 = new JFrame("Выберете действие: Шифрование / Расшифровка / Метод Brute force");
+        JFrame jframe = new JFrame("Выберете действие: Шифрование / Расшифровка / Метод Brute force");
 
-        jframe1.setBounds(300, 130, 600, 150);
-        jframe1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        jframe1.setLayout(new BoxLayout(jframe1.getContentPane(), BoxLayout.Y_AXIS));
+        jframe.setBounds(300, 130, 600, 150);
+        jframe.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        jframe.setLayout(new BoxLayout(jframe.getContentPane(), BoxLayout.Y_AXIS));
 
         JButton jButton1 = new JButton("Шифрование");
         JButton jButton2 = new JButton("Расшифровка");
@@ -31,18 +28,18 @@ public class Swing {
         jPanel1.add(jButton1);
         jPanel2.add(jButton2);
         jPanel3.add(jButton3);
-        jframe1.add(jPanel1);
-        jframe1.add(jPanel2);
-        jframe1.add(jPanel3);
+        jframe.add(jPanel1);
+        jframe.add(jPanel2);
+        jframe.add(jPanel3);
 
-        jframe1.setVisible(true);
+        jframe.setVisible(true);
 
 
         jButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 title = "Выбран режим ШИФРОВАНИЯ";
-                jframe1.setVisible(false);
+                jframe.setVisible(false);
                 Encryption enc = new Encryption();
                 enc.frame(title);
             }
@@ -53,7 +50,7 @@ public class Swing {
             @Override
             public void actionPerformed(ActionEvent e) {
                 title = "Выбран режим РАСШИФРОВКИ";
-                jframe1.setVisible(false);
+                jframe.setVisible(false);
                 Decoding dec = new Decoding();
                 dec.frame(title);
             }
@@ -63,8 +60,8 @@ public class Swing {
         jButton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                title = "Выбран Метод Brutte force";
-                jframe1.setVisible(false);
+                title = "Выбран Метод BRUTE FORCE";
+                jframe.setVisible(false);
                 BruteForce bruteForce = new BruteForce();
                 bruteForce.frame(title);
             }

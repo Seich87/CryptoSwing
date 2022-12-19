@@ -73,11 +73,9 @@ public class BruteForce {
                 arrInFile.add(a);
             }
 
-
             for (int k = 1; k < arrAll.size(); k++) {
                 ArrayList<Character> arrCode = arrCodeAdd(arrAll, arrInFile, k);
                 if (textCheck(arrCode)) {
-
                     Writer writer = new FileWriter("C:\\Java\\MyProject\\CryptoSwing\\src\\BruteForceFile.txt");
                     for (Character ch : arrCode) {
                         writer.write(ch);
@@ -85,7 +83,6 @@ public class BruteForce {
                     writer.flush();
                     writer.close();
                     frameFinalBruteForce(k);
-                    //break;
                 } else {
                     arrCode.clear();
                 }
