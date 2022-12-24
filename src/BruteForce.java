@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class BruteForce {
     void frame(String title) {
         JFrame frame = new JFrame(title);
-        frame.setBounds(300, 130, 600, 200);
+        frame.setBounds(300, 130, 600, 150);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
 
