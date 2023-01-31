@@ -38,7 +38,7 @@ public class Encryption extends CryptoUtils {
                     }
                 }
             }
-
+		//path must not be hardcoded
             Writer writer = new FileWriter("C:\\Java\\MyProject\\CryptoSwing\\src\\encryptionFile.txt");
             for (Character ch : arrCode) {
                 writer.write(ch);

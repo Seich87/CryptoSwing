@@ -73,7 +73,7 @@ public class StaticAnalyze {
 
     private void fileToMap(Path path1, Path path2) {
         String allStr = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
-
+	//allStr better be static final var in some utility class
         char[] allChar = allStr.toCharArray();
         ArrayList<Character> arrAll = new ArrayList<>();
         for (char a : allChar) {
