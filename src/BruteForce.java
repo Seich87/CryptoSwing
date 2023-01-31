@@ -10,7 +10,7 @@ import java.util.ArrayList;
 public class BruteForce {
     void frame(String title) {
         JFrame frame = new JFrame(title);
-        frame.setBounds(300, 130, 600, 150);
+        frame.setBounds(300, 130, 600, 150);//bounds better 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.Y_AXIS));
 
@@ -146,7 +146,7 @@ public class BruteForce {
     }
 
     private void frameFinalBruteForce(int k) {
-        JFrame frame3 = new JFrame("Выполнено");
+        JFrame frame3 = new JFrame("Выполнено");//names like frame3 are not informative
         frame3.setBounds(300, 130, 600, 150);
         frame3.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame3.setLayout(new BoxLayout(frame3.getContentPane(), BoxLayout.Y_AXIS));
